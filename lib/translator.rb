@@ -26,11 +26,11 @@ end
 
 def get_japanese_emoticon(yaml_file, emoticon)
     # code goes here
-    library = load_library(yaml_file)
+    emojis = load_library(yaml_file)
 
     response = nil
 
-    library["get_emoticon"].each do |english, japanese|
+    emojis["get_emoticon"].each do |english, japanese|
         if emoticon == english
             response = japanese
         end
