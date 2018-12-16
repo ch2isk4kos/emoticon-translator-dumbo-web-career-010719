@@ -47,7 +47,12 @@ def get_japanese_emoticon(yaml_file, emoticon)
     end
 end
 
-
+# 3.) #get_english_meaning
+#	calls on #load_library and gives it the argument of the file path
+#  	returns the English meaning of the Japanese emoticon (＾ｖ＾)
+#  	returns the English meaning of the Japanese emoticon (￣ー￣)
+#  	returns the English meaning of the Japanese emoticon (Ｔ▽Ｔ)
+#  	returns an apology message if the argument is not a known emoticon
 def get_english_meaning(yaml_file, emoticon)
     # code goes here
     library = load_library(yaml_file)
