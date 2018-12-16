@@ -45,16 +45,19 @@ end
 
 
 def get_english_meaning(yaml_file, emoticon)
-  # code goes here
-  library = load_library(yaml_file)
-  response = nil
-  library["get_meaning"].each do |emo, trans|
-    if emo == emoticon
-      response = trans
+    # code goes here
+    library = load_library(yaml_file)
+    response = nil
+
+    library["get_meaning"].each do |emo, trans|
+        if emo == emoticon
+            response = trans
+        end
     end
-  end
-  if response == nil
-    return "Sorry, that emoticon was not found"
-  else
-    return response
+
+    if response == nil
+        return "Sorry, that emoticon was not found"
+    else
+        return response
+    end
 end
