@@ -3,6 +3,13 @@ require "yaml"
 require "pry"
 # emojis = YAML.load_file('emoticons.yml')
 
+# 1.) #load_library
+#	accepts one argument, the file path
+#	returns a hash
+#   the keys inside the 'get_meaning' hash are the Japanese emoticons
+#   the emoticon keys inside the 'get_meaning' hash point to their meanings
+#   the keys inside the 'get_emoticon' hash are the English emoticons
+#   the emoticon keys inside the 'get_emoticon' hash point to their Japanese equivalents
 def load_library(file_path)
     # code goes here
     emojis = YAML.load_file(file_path)
@@ -14,16 +21,13 @@ def load_library(file_path)
     new_hash
 end
 
-# def get_japanese_emoticon(file_path = './lib/emoticons.yml', english_emoticon)
-#     emojis = load_library(file_path)
-#
-#     if emojis["get_emoticon"].include?(english_emoticon)
-#         emojis["get_emoticon"][english_emoticon]
-#     else
-#         "Sorry, that emoticon was not found"
-#     end
-# end
-
+# 2.) #get_japanese_emoticon
+#  	accepts two arguments, the YAML file path and the emoticon
+#  	calls on #load_library and gives it the argument of the file path
+#  	returns the Japanese equivalent of an English grinning
+#  	returns the Japanese equivalent of an English happy
+#   returns the Japanese equivalent of an English sad
+#   returns an apology message if the argument is not a known emoticon
 def get_japanese_emoticon(yaml_file, emoticon)
     # code goes here
     emojis = load_library(yaml_file)
