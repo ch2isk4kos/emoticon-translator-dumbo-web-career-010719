@@ -45,7 +45,7 @@ end
 
 
 def get_english_meaning(yaml_file, emoticon)
-  # code goes here	  
+  # code goes here
   library = load_library(yaml_file)
   response = nil
   library["get_meaning"].each do |emo, trans|
