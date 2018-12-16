@@ -16,7 +16,7 @@ end
 
 # def get_japanese_emoticon(file_path = './lib/emoticons.yml', english_emoticon)
 #     emojis = load_library(file_path)
-# 
+#
 #     if emojis["get_emoticon"].include?(english_emoticon)
 #         emojis["get_emoticon"][english_emoticon]
 #     else
@@ -25,7 +25,7 @@ end
 # end
 
 def get_japanese_emoticon(yaml_file, emoticon)
-    # code goes here	  
+    # code goes here
     library = load_library(yaml_file)
 
     response = nil
@@ -41,7 +41,7 @@ def get_japanese_emoticon(yaml_file, emoticon)
     else
         return response
     end
-end	
+end
 
 
 def get_english_meaning
